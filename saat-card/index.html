@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+     #rolextitle{
+        word-wrap: break-all;
+     }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+
+                <h1 class="text-center text-dark ">ÜRÜNLER</h1>
+            </div>
+        </div>
+
+        <div class="row mt-5 ">
+            <div class="col-md-3">
+                <div class="card" id="rolexcard">
+                    <img  src="r1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 id="rolextitle" class="card-title">Rolex Daytona 2023 RENKLİ BAGET TAŞLI ETA MEKANİZMA   41mm KUTU TAM SET</h6>
+                      <p class="card-text">
+                        <span class="text-secondy" id="fiyat" ><del>120.000$</del></span>
+                        <span class="text-success" id="indirimlifiyat"><big>120.000$</big></span>
+                    </p>
+                      <a  onclick="ekle()"  id="eklebtn" style="width: 100%;" class="btn btn-outline-primary ">Sepete Ekle</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+   
+<script>
+    var yenibaslik;
+    var baslik=document.getElementById("rolextitle").innerText
+
+    if(baslik.length>50){
+        yenibaslik=baslik.substring(0,50)+"..."
+    }else{
+        yenibaslik=baslik
+    }
+
+    document.getElementById("rolextitle").innerText=yenibaslik
+
+
+
+    var fiyat=document.getElementById("fiyat").innerText
+
+    fiyat=fiyat.replace("$","")
+    fiyat=parseFloat(fiyat)
+
+    indirimlifiyat=(fiyat*0.90)+"$"
+    document.getElementById('indirimlifiyat').innerHTML=indirimlifiyat
+
+  function ekle(){
+  document.getElementById('eklebtn').innerText="Sepete Eklendi"  }
+
+  document.getElementById('rolexcard').style.borderColor="crimson"
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
